@@ -1,0 +1,37 @@
+import Link from 'next/link';
+
+export default function ReviewPage() {
+  return (
+    <div className="bg-[#f7f3ea] min-h-screen">
+      <header className="py-4 px-6 flex items-center justify-between">
+        <div className="flex items-center">
+          <Link href="/" className="mr-10">
+            <div className="flex items-center">
+              <span className="text-3xl font-cursive">Floréa</span>
+              <div className="w-12 h-12 ml-1 relative">
+                <div className="absolute inset-0 opacity-20 bg-pink-200 rounded-full"></div>
+              </div>
+            </div>
+          </Link>
+        </div>
+        <nav className="flex space-x-8">
+          <Link href="/dashboard/home-ad" className="text-gray-400 hover:text-black">
+            Home
+          </Link>
+          <Link href="/dashboard/product-ad" className="text-gray-400 hover:text-black">
+            Product
+          </Link>
+          <Link href="/dashboard/blog-ad" className="text-gray-400 hover:text-black">
+            Blog
+          </Link>
+          <Link href="/dashboard/review-ad" className="text-black border-b-2 border-black">
+            Review
+          </Link>
+          <Link href="/dashboard/about-ad" className="text-gray-400 hover:text-black">
+            About Us
+          </Link>
+        </nav>
+      </header>
+    </div>
+  );
+}
