@@ -1,0 +1,143 @@
+// app/product-cus/page.tsx
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function ProductPage() {
+  const flowerProducts = [
+    {
+      id: 1,
+      name: 'Rustic Bloom Box',
+      price: 'Rp 800.000',
+      image: '/images/rustic-bloom-box.jpg',
+    },
+    {
+      id: 2,
+      name: 'Lavender Serenity',
+      price: 'Rp 650.000',
+      image: '/images/lavender-serenity.jpg',
+    },
+    {
+      id: 3,
+      name: 'Blushing Elegance',
+      price: 'Rp 850.000',
+      image: '/images/blushing-elegance.jpg',
+    },
+    {
+      id: 4,
+      name: 'Peach Delight',
+      price: 'Rp 750.000',
+      image: '/images/peach-delight.jpg',
+    },
+    {
+      id: 5,
+      name: 'Spring Garden',
+      price: 'Rp 700.000',
+      image: '/images/spring-garden.jpg',
+    },
+    {
+      id: 6,
+      name: 'White Rose Bouquet',
+      price: 'Rp 780.000',
+      image: '/images/white-rose-bouquet.jpg',
+    },
+  ];
+
+  return (
+    <div className="bg-[#f7f3ea] min-h-screen">
+      {/* Navigation */}
+      <header className="py-4 px-6 flex items-center justify-between">
+        <div className="flex items-center">
+          <Link href="/" className="mr-10">
+            <div className="flex items-center">
+              <span className="text-3xl font-cursive">Floréa</span>
+              <div className="w-12 h-12 ml-1 relative">
+                <div className="absolute inset-0 opacity-20 bg-pink-200 rounded-full"></div>
+              </div>
+            </div>
+          </Link>
+          <nav className="flex space-x-8">
+            <Link href="/dashboard/home-ad" className="text-gray-400 hover:text-black">
+              Home
+            </Link>
+            <Link href="/dashboard/product-ad" className="text-black border-b-2 border-black">
+              Product
+            </Link>
+            <Link href="/dashboard/blog-ad" className="text-gray-400 hover:text-black">
+              Blog
+            </Link>
+            <Link href="/dashboard/review-ad" className="text-gray-400 hover:text-black">
+              Review
+            </Link>
+            <Link href="/dashboard/about-ad" className="text-gray-400 hover:text-black">
+              About Us
+            </Link>
+          </nav>
+        </div>
+        <div className="flex items-center space-x-4">
+          <div className="relative">
+            <input 
+              type="text" 
+              placeholder="Search..." 
+              className="pl-4 pr-8 py-1 rounded-full bg-white"
+            />
+            <svg className="w-4 h-4 absolute right-3 top-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <button className="p-2">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      {/* Add Button */}
+      <div className="fixed bottom-8 right-8">
+        <button className="bg-black text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
+        </button>
+      </div>
+
+      {/* Products Grid */}
+      <main className="container mx-auto px-6 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {flowerProducts.map((product) => (
+            <div key={product.id} className="relative group">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                <div className="relative h-80 w-full">
+                  {/* Use a div with background as a placeholder for actual images */}
+                  <div className="absolute inset-0 bg-gray-200" style={{
+                    backgroundImage: `url(${product.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}></div>
+                </div>
+                <div className="p-4 flex justify-between items-center">
+                  <div>
+                    <h3 className="text-xl font-bold">{product.name}</h3>
+                    <p className="text-gray-700">{product.price}</p>
+                  </div>
+                  <div className="flex space-x-2">
+                    <button className="p-2">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                      </svg>
+                    </button>
+                    <button className="p-2">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
