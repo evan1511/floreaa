@@ -29,7 +29,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex space-x-8">
+          <div className="className="flex items-center space-x-12"">
             <Link href="/dashboard/home-ad" className="font-medium border-b-2 border-black">Home</Link>
             <Link href="/dashboard/product-ad" className="font-medium text-gray-500">Product</Link>
             <Link href="/dashboard/blog-ad" className="font-medium text-gray-500">Blog</Link>
