@@ -63,7 +63,7 @@ export default function ProductPage() {
           </Link>
         </div>
 
-        <div className="flex space-x-8">
+        <div className="flex items-center space-x-12">
           <Link href="/dashboard" className="font-medium text-gray-400">Home</Link>
           <Link href="/dashboard/product-cus" className="font-medium border-b-2 border-black">Product</Link>
           <Link href="/dashboard/blog-cus" className="font-medium text-gray-400">Blog</Link>
