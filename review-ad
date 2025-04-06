@@ -14,7 +14,7 @@ export default function ReviewPage() {
             </div>
           </Link>
         </div>
-        <nav className="flex space-x-8">
+        <nav className="flex items-center space-x-12">
           <Link href="/dashboard/home-ad" className="text-gray-400 hover:text-black">
             Home
           </Link>
