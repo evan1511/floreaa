@@ -1,16 +1,14 @@
-import Navbar from "../components/Navbar/page";
-import Footer from "../components/Footer/page";
+import '@/app/ui/global.css';
+import {inter} from '@/app/ui/fonts';
 
-
-export default function CustomerLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({children}: {children: React.ReactNode;}) {
   return (
-    
-    <div className="flex flex-col min-h-screen bg-white">
+    <html lang="en">
+      <body className={`${inter.className} antialiased}`}>
 
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        {children}
 
-    </div>
+        </body>
+    </html>
   );
 }
