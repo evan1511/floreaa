@@ -1,67 +1,36 @@
-
-import Image from 'next/image';
-import Link from 'next/link';
-import Head from 'next/head';
-
-export default function Home() {
+const Dashboard = () => {
   return (
-    <div className="bg-[#f8f3ea] min-h-screen">
-      <Head>
-        <title>Florea - Perfect gifts for you</title>
-        <meta name="description" content="Send flowers to your favorite people" />
-      </Head>
+    <div className="min-h-screen flex flex-col">
+      {/* Header */}
+      <header className="flex justify-between items-center p-4 bg-gray-800 text-white">
+        <div className="flex items-center space-x-4">
+          <div className="font-bold">Evan</div>
+        </div>
+        <div className="text-lg">Dashboard</div>
+        <div className="flex items-center space-x-4">
+          <div>Search</div>
+        </div>
+      </header>
 
-      <main>
-        <nav className="py-6 px-12 flex justify-between items-center">
-          <div className="flex items-center">
-            <Link href="/" className="text-3xl font-cursive">
-              <div className="relative flex items-center">
-                <span className="z-10">Florea</span>
-                <div className="absolute -top-4 -left-2 w-16 h-16 opacity-30">
-                  <svg viewBox="0 0 100 100" className="w-full h-full text-pink-300">
-                    <path
-                      d="M50,10 C70,10 90,30 90,50 C90,70 70,90 50,90 C30,90 10,70 10,50 C10,30 30,10 50,10 Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </Link>
+      {/* Main Content */}
+      <main className="flex-1 p-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-md border-2 border-gray-300 flex flex-col items-center">
+            <div className="text-xl font-semibold mb-4">Catalog</div>
+            <div className="text-3xl font-bold">5.560</div>
           </div>
-
-          <div className="flex items-center space-x-12">
-            <Link href="/dashboard/home-ad" className="font-medium border-b-2 border-black">Home</Link>
-            <Link href="/dashboard/product-ad" className="font-medium text-gray-500">Product</Link>
-            <Link href="/dashboard/blog-ad" className="font-medium text-gray-500">Blog</Link>
-            <Link href="/dashboard/review-ad" className="font-medium text-gray-500">Review</Link>
-            <Link href="/dashboard/about-ad" className="font-medium text-gray-500">About Us</Link>
+          <div className="bg-white p-6 rounded-lg shadow-md border-2 border-gray-300 flex flex-col items-center">
+            <div className="text-xl font-semibold mb-4">Total Income</div>
+            <div className="text-3xl font-bold">Rp 984.562.433.04</div>
           </div>
-        </nav>
-
-        <div className="flex px-12 py-16"/>
-          
-          <div className="w-1/2 flex flex-col justify-center">
-            <h1 className="text-7xl font-serif text-[#3c3835] mb-4">
-              Perfect gifts<br />for you
-            </h1>
-            <p className="text-lg text-gray-500 mb-8">
-              Send To Your Favorite Human With The Best Flower<br />
-              Send
-            </p>
-            
-          
-          <div className="w-1/2 flex justify-center items-center">
-            <div className="w-96 h-96 rounded-full overflow-hidden relative">
-              <Image 
-                src="/images/flower-bouquet.jpg" 
-                alt="Flower Bouquet" 
-                fill
-                className="object-cover"
-              />
-            </div>
+          <div className="bg-white p-6 rounded-lg shadow-md border-2 border-gray-300 flex flex-col items-center">
+            <div className="text-xl font-semibold mb-4">Review</div>
+            <div className="text-3xl font-bold">19.302</div>
           </div>
         </div>
       </main>
     </div>
-  );
+  )
 }
+
+export default Dashboard
