@@ -1,5 +1,4 @@
 // app/dashboard/about-cus/page.tsx
-
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,40 +6,79 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#f9f3e8]">
       {/* Navigation */}
-      <header className="flex items-center justify-between px-8 py-4">
-        <div className="flex items-center">
-          <Link href="/" className="relative">
-            <span className="font-script text-4xl text-black relative z-10">floréa</span>
-            <span className="absolute -top-6 -left-2 text-[#ffcaca] text-5xl">❀</span>
-          </Link>
-        </div>
-        
-        <nav className="flex items-center space-x-12">
-          <Link href="/dashboard" className="text-xl text-gray-500 hover:text-black">Home</Link>
-          <Link href="/dashboard/product-cus" className="text-xl text-gray-500 hover:text-black">Product</Link>
-          <Link href="/dashboard/blog-cus" className="text-xl text-gray-500 hover:text-black">Blog</Link>
-          <Link href="/dashboard/review-cus" className="text-xl text-gray-500 hover:text-black">Review</Link>
-          <Link href="/dashboard/about-cus" className="text-xl text-black border-b-2 border-black">About Us</Link>
-        </nav>
-        
-        <div className="relative">
-          <input 
-            type="text" 
-            placeholder="Search..." 
-            className="pl-10 pr-4 py-2 rounded-full bg-white focus:outline-none"
-          />
-          <div className="absolute left-3 top-2.5">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
-        </div>
-      </header>
 
       {/* Main Content */}
       <main className="px-8 py-6 grid grid-cols-1 md:grid-cols-12 gap-6">
         {/* Left Column */}
         <div className="md:col-span-5 space-y-6">
+          {/* Developer Profiles Section */}
+          <div className="bg-white rounded-3xl p-4">
+            <h2 className="text-xl font-semibold mb-4">Developer Profiles</h2>
+            
+            {/* Developer 1 */}
+            <div className="flex items-center mb-6 pb-4 border-b border-gray-100">
+              <div className="w-20 h-20 rounded-full overflow-hidden mr-4">
+                <div className="w-full h-full bg-green-500 relative">
+                  {/* Replace with actual image */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-white text-xs">Profile Photo</span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-grow">
+                <p className="text-gray-500 text-sm">Username</p>
+                <p className="font-medium">Robin Jauhari</p>
+              </div>
+              <button className="p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                </svg>
+              </button>
+            </div>
+            
+            {/* Developer 2 */}
+            <div className="flex items-center mb-6 pb-4 border-b border-gray-100">
+              <div className="w-20 h-20 rounded-full overflow-hidden mr-4">
+                <div className="w-full h-full bg-red-500 relative">
+                  {/* Replace with actual image */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-white text-xs">Profile Photo</span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-grow">
+                <p className="text-gray-500 text-sm">Username</p>
+                <p className="font-medium">Evan Abel Lesmana</p>
+              </div>
+              <button className="p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                </svg>
+              </button>
+            </div>
+            
+            {/* Developer 3 */}
+            <div className="flex items-center">
+              <div className="w-20 h-20 rounded-full overflow-hidden mr-4">
+                <div className="w-full h-full bg-red-600 relative">
+                  {/* Replace with actual image */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-white text-xs">Profile Photo</span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-grow">
+                <p className="text-gray-500 text-sm">Username</p>
+                <p className="font-medium">Berren Vesra Wibowo</p>
+              </div>
+              <button className="p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
           {/* Find Us Section */}
           <div className="bg-white rounded-3xl p-4">
             <h2 className="text-xl font-semibold mb-2">Find Us</h2>
